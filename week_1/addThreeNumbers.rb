@@ -16,6 +16,4 @@ number3 = number3.to_i
 
 total = number1 + number2 + number3
 
-#this just affirms how cool string interpolation can be
-puts "The total of " + number1.to_s + ", " + number2.to_s + ", and " + number3.to_s + " is " + total.to_s + "."
-
+puts " the total of #{number1}, #{number2}, and #{number3} is #{total}."
