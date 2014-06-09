@@ -1,7 +1,9 @@
 def add
-  1+1
-  2+2
-  3+3
+  a = 1
+  b = 2
+  c= a + b
+  d = 4
+  c
 end
 
 puts add
