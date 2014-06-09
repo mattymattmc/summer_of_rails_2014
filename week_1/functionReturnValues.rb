@@ -1,9 +1,8 @@
 def add
   a = 1
   b = 2
-  c= a + b
-  d = 4
-  c
+  return a
+  c = a + b
 end
 
 puts add
