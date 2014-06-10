@@ -25,10 +25,14 @@ while(loop_again) do
   print "Would you like to enter another person (enter no to stop)?"
   
   again = gets.chop
-  if again == "no" || again == "NO" || again == "No"
-    loop_again = false
-  end
-
+  
+  ##
+  #  code should be refactored down to something like the following code
+#  if again == "no" || again == "NO" || again == "No"
+#    loop_again = false
+#  end
+  loop_again = again.downcase != "no"
+  
 end
 
 people.each  {|person| puts "Name: #{person[:first_name]} #{person[:last_name]}\nAge: #{person[:age]}"}
