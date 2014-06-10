@@ -17,12 +17,12 @@ while(loop_again) do
   puts "What is the person's age?"
   age = gets.chop
   
-  person = {"first_name" => "#{first_name}", "last_name" => "#{last_name}", "age" => "#{age}"}
+  person = {:first_name => "#{first_name}", :last_name => "#{last_name}", :age => "#{age}"}
   
   people.push person
   # same as people << person
   
-  puts "Would you like to enter another person (enter no to stop)?"
+  print "Would you like to enter another person (enter no to stop)?"
   
   again = gets.chop
   if again == "no" || again == "NO" || again == "No"
@@ -31,5 +31,5 @@ while(loop_again) do
 
 end
 
-people.each  {|person| puts "Name: #{first_name} #{last_name}\nAge: #{age}"}
+people.each  {|person| puts "Name: #{person[:first_name]} #{person[:last_name]}\nAge: #{person[:age]}"}
 
