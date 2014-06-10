@@ -30,5 +30,6 @@ while(loop_again) do
   end
 
 end
-puts "You entered #{people.length} people."
+
+people.each  {|person| puts "Name: #{first_name} #{last_name}\nAge: #{age}"}
 
