@@ -1,4 +1,4 @@
-Class BankAccount
+class BankAccount
 
 def balance
   @balance = 0 if @balance.nil?
@@ -12,6 +12,7 @@ def deposit(amount)
   @balance += amount
 end
 
+end
 
   
 
