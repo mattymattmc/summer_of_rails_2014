@@ -14,10 +14,12 @@ class BankAccount
 
   def deposit(amount)
     @balance += amount
+ 
   end
   
   def withdrawal(amount)
     @balance -= amount
+   
   end
   
   def name=(new_name)
@@ -32,6 +34,12 @@ class BankAccount
     puts "The account \"#{self.name}\" has a balance of #{self.to_s}."
   end
   
+  def history
+   
+    
+    
+    
+  end
 end
 
 =begin
@@ -49,10 +57,21 @@ account2 = BankAccount.new
 account2.withdrawal 20
 puts account2
 
-=end
+
 
 account = BankAccount.new
 account.deposit 20
 account.deposit 20
 account.name = "TestAccount"
 puts account.summary
+
+=end
+
+
+account = BankAccount.new
+account.name = "TestAccount"
+account.deposit 20
+account.deposit 20
+account.withdrawal 30
+account.deposit 100
+puts account.history
