@@ -1,11 +1,12 @@
 class BankAccount
-
+  
   def balance
     @balance
   end
   
   def initialize
     @balance = 0
+    @transaction_history = []
   end
 
   def to_s
@@ -14,12 +15,14 @@ class BankAccount
 
   def deposit(amount)
     @balance += amount
- 
+    transaction = {:type => "Deposit", :amount => amount}
+    @transaction_history << transaction
   end
   
   def withdrawal(amount)
     @balance -= amount
-   
+    transaction = {:type => "Withdrawal", :amount => amount}
+    @transaction_history << transaction
   end
   
   def name=(new_name)
@@ -35,10 +38,8 @@ class BankAccount
   end
   
   def history
-   
-    
-    
-    
+    @transaction_history.map{|transaction| puts "#{transaction[:type]} of $#{transaction[:amount]}"}
+    puts "\nThe account \"#{self.name} has a balance of #{self.to_s}\""
   end
 end
 
